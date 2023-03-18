@@ -32,9 +32,9 @@ stages:
     pool:
       vmImage: 'windows-latest'
     steps:
-    - task: CredScan@2
-      # inputs:
-      #   toolMajorVersion: 'V3'
+    - task: MicrosoftSecurityDevOps@1
+      inputs:
+        categories: 'secrets'
  
   - job: Build
     displayName: Build App
