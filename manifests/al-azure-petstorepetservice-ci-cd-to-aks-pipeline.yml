@@ -88,7 +88,7 @@ stages:
             displayName: Create secret
             inputs: 
               action: createSecret
-              kubernetesServiceConnection: aks-azurepetstore
+              kubernetesServiceConnection: serviceaksazurepetstore
               namespace: petstoreservices
               secretType: dockerRegistry
               secretName: $(imagePullSecret)
