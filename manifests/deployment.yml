@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: adamlisickiazurepetstore 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: adamlisickiazurepetstore
+  template:
+    metadata:
+      labels:
+        app: adamlisickiazurepetstore 
+    spec:
+      containers:
+        - name: adamlisickiazurepetstore 
+          image: crazurepetstore.azurecr.io/adamlisickiazurepetstore
+          ports:
+          - containerPort: 80
