@@ -32,9 +32,8 @@ stages:
     pool:
       vmImage: 'windows-latest'
     steps:
-    - task: CredScan@2
+    - task: ms-codeanalysis.vss-microsoft-security-code-analysis-devops.build-task-credscan.CredScan@2
       inputs:
-        categories: 'secrets'
         toolMajorVersion: 'V2'
  
   - job: Build
