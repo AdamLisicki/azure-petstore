@@ -32,9 +32,9 @@ stages:
     pool:
       vmImage: 'windows-latest'
     steps:
-    - task: ms-codeanalysis.vss-microsoft-security-code-analysis-devops.build-task-credscan.CredScan@2
+    - task: CredScan@3
       inputs:
-        toolMajorVersion: 'V2'
+        toolMajorVersion: 'V3'
  
   - job: Build
     displayName: Build App
