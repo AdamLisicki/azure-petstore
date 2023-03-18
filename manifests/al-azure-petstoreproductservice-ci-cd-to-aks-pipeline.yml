@@ -88,7 +88,7 @@ stages:
             displayName: Create secret
             inputs: 
               action: createSecret
-              kubernetesServiceConnection: aks-azurepetstore-ingress-petstoreservices
+              kubernetesServiceConnection: aks-azurepetstore-ingress-petstoreservices-1767
               namespace: ingress-petstoreservices
               secretType: dockerRegistry
               secretName: $(imagePullSecret)
@@ -97,7 +97,7 @@ stages:
             displayName: Deploy to Kubernetes cluster
             inputs:
               action: deploy
-              kubernetesServiceConnection: aks-azurepetstore-ingress-petstoreservices
+              kubernetesServiceConnection: aks-azurepetstore-ingress-petstoreservices-1767
               namespace: ingress-petstoreservices
               manifests: |
                 $(Pipeline.Workspace)/manifests/petstoreproductservice-deployment-everything-enabled.yml
