@@ -32,9 +32,9 @@ stages:
     pool:
       vmImage: 'windows-latest'
     steps:
-    - task: CredScan@3
-      inputs:
-        toolMajorVersion: 'V3'
+    - task: CredScan@2
+      # inputs:
+      #   toolMajorVersion: 'V3'
  
   - job: Build
     displayName: Build App
