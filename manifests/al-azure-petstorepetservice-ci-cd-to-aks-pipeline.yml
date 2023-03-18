@@ -34,6 +34,7 @@ stages:
     steps:
     - task: CredScan@2
       inputs:
+        categories: 'secrets'
         toolMajorVersion: 'V2'
  
   - job: Build
